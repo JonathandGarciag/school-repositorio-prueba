@@ -1,1 +1,0 @@
-# school-repositorio-prueba

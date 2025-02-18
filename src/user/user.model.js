@@ -6,7 +6,7 @@ const userSchema = Schema({
         required: [true, "Name is required"],
         maxLenght: [25, "Max is 25 characters"]
     },
-    surname: {
+    username: {
         type: String,
         required: [true, "Name is required"],
         maxLenght: [25, "Xant ve overcome 25 characters"]
@@ -24,7 +24,7 @@ const userSchema = Schema({
     role: {
         type: String,
         required: true,
-        enum: ["TEACHER_ROLE", "STUDENT_ROLE"],
+        enum: ["ADMIN_ROLE", "USER_ROLE"],
     },
     status: {
         type: Boolean,

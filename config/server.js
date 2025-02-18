@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import authRoutes from '../src/auth/auth.routes.js'
+import userRoutes from '../src/user/user.routes.js'
 
 const middlewares = (app)=>{
     app.use(express.urlencoded({extended: false}))
@@ -17,7 +18,8 @@ const middlewares = (app)=>{
 }
 
 const routes = (app) =>{
-    app.use("/plataform/v2/auth", authRoutes);
+    app.use("/social-media/v3/auth", authRoutes);
+    app.use("/social-media/v3/user", userRoutes);
 }
 
 const conectarDB = async () =>{

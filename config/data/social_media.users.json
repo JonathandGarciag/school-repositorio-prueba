@@ -1,0 +1,119 @@
+[{
+  "_id": {
+    "$oid": "67b4a50f3055d504777d85a0"
+  },
+  "name": "Jonathan García",
+  "username": "Jhonny",
+  "email": "jgarcia@ggmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ZCIKMiHkuGjC+5W1oJGEBA$rnBVlm1Pps5xoCxZopDBEBVYEy+Q/UhybwKZJyXA0Zs",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-18T15:19:43.182Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T15:19:43.182Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4a58c3055d504777d85a4"
+  },
+  "name": "Diego Otuc",
+  "username": "Pangel",
+  "email": "peotuc@ggmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$rUhAy72iw/MtePQZSRvwpA$Vrb0HVNeT2jcSmUbLFJLNW+o3tS6SDDCBO/YYU9w5nU",
+  "role": "USER_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-18T15:21:48.861Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T17:40:19.547Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4b1cf415abc4fbd7aaa56"
+  },
+  "name": "Jovanni huerf",
+  "username": "Huerfanito",
+  "email": "hjova@ggmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$CK3jqo8aAaGc16PJ2kBv0w$ucO+8oxjdoAQq7wLD05OuOVQ+W/19jayDCOBoj5Qr5c",
+  "role": "USER_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-18T16:14:07.552Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T16:14:07.552Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4b1e8415abc4fbd7aaa59"
+  },
+  "name": "Christian Medrano",
+  "username": "cmedrano",
+  "email": "cmedrano@ggmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$LH9i+srhfuYv1KIiXQ3oXA$/WbBQhMXVk2mairDjCEydXIHCpkpuPcWqnQeICsWwIA",
+  "role": "USER_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-18T16:14:32.576Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T16:14:32.576Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4b218415abc4fbd7aaa5c"
+  },
+  "name": "Estuardo Lopez",
+  "username": "tato",
+  "email": "tato@ggmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$6Jq4TLf7ugjRILeXltIXEw$ZdKIcPqVBW2FLHBvgHLnstuyZG2rEFk4M1VWkh7JlBc",
+  "role": "USER_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-18T16:15:20.988Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T16:15:20.988Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4b228415abc4fbd7aaa5f"
+  },
+  "name": "Carlos Borrayo",
+  "username": "pallo",
+  "email": "pallo@ggmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$3NrbU2TJKLQ7E2nYTqgNXg$AY3Tz+5LXBsbUI6CnxThL1OFsNBN8+pY4BSpPz1YHis",
+  "role": "USER_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-18T16:15:36.588Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T16:15:36.588Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b4b234415abc4fbd7aaa62"
+  },
+  "name": "Joel Ortiz",
+  "username": "null",
+  "email": "null@ggmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ZvCCK3Kfrb3BQOb8ozlwJA$jy3yCHUZlaGxPCTgo5hCy5QKhwP1jLivkj9Q9l/FsDg",
+  "role": "USER_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-18T16:15:48.106Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T16:15:48.106Z"
+  }
+}]
