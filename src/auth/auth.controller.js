@@ -1,5 +1,5 @@
 import { hash, verify } from "argon2";
-import Usuario from '../user/user.model.js'
+import User from '../user/user.model.js'
 import { generarJWT } from "../helpers/generate-jwt.js";
 
 export const register = async (req, res) => {
@@ -9,19 +9,17 @@ export const register = async (req, res) => {
 
         const encryptedPassword = await hash(password); 
 
-        const user = await Usuario.create({
+        const user = await User.create({
             name,
             username,
             email,
             password: encryptedPassword,
-            role: "CUSTOMER_ROLE",  
         });
 
         return res.status(200).json({
             message: "User registered successfully",
             userDetails: {
-                user: user.email,
-                role: user.role, 
+                user: user.email
             },
         });
 
@@ -40,7 +38,7 @@ export const login = async (req, res) => {
     try {
         const lowerEmail = email ? email.toLowerCase() : null;
 
-        const user = await Usuario.findOne({ email: lowerEmail });
+        const user = await User.findOne({ email: lowerEmail });
 
         if (!user) {
             return res.status(400).json({
@@ -88,22 +86,7 @@ export const updateUserRole = async (req, res) => {
         const { id } = req.params;
         const { role } = req.body;
 
-        const adminUser = req.user;
-
-        if (adminUser.role !== "ADMIN_ROLE") {
-            return res.status(403).json({
-                msg: "No tienes permisos para cambiar roles"
-            });
-        }
-
-        const validRoles = ["ADMIN_ROLE", "CUSTOMER_ROLE"];
-        if (!validRoles.includes(role)) {
-            return res.status(400).json({
-                msg: "El rol ingresado no es válido"
-            });
-        }
-
-        const user = await Usuario.findByIdAndUpdate(id, { role }, { new: true });
+        const user = await User.findByIdAndUpdate(id, { role: role }, { new: true });
 
         if (!user) {
             return res.status(404).json({

@@ -1,6 +1,8 @@
 import { Router } from "express";
-import { register, login } from "../auth/auth.controller.js";
-import { registerValidator, loginValidator } from "../middlewares/validator.js";
+import { register, login, updateUserRole } from "../auth/auth.controller.js";
+import { validarJWT } from "../middlewares/validar-jwt.js";
+import { registerValidator, loginValidator, updateUserRoleValidator  } from "../middlewares/validator.js";
+import { tieneRole } from "../middlewares/tiene-role.js";
 
 const router = Router();
 
@@ -15,5 +17,15 @@ router.post(
     loginValidator,
     login
 )
+
+router.put(
+    '/updateRole/:id', 
+    [
+        validarJWT,
+        tieneRole("ADMIN_ROLE")
+    ],
+    updateUserRoleValidator, 
+    updateUserRole 
+);
 
 export default router;

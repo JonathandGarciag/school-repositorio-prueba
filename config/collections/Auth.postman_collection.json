@@ -1,9 +1,110 @@
 {
 	"info": {
-		"_postman_id": "3158f3ba-fdd2-4b8c-af4a-4175e2d42dc1",
+		"_postman_id": "327357e1-e3a9-4952-80c3-74d6a15ae4cf",
 		"name": "Auth",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38078627"
+		"_exporter_id": "42619043"
 	},
-	"item": []
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Carlos Borrayo\",\r\n    \"username\": \"pallo\",\r\n    \"email\": \"pallo@example.com\",\r\n    \"password\": \"12345678\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/proyect-store/vfinal/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proyect-store",
+						"vfinal",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"jgarciadmin@gmail.com\",\r\n  \"password\": \"12345678\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/proyect-store/vfinal/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proyect-store",
+						"vfinal",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RoleUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZDMwN2VkNjI3ZGMyMzZlMjFjY2EiLCJpYXQiOjE3NDA0OTcxNzUsImV4cCI6MTc0MDUwMDc3NX0.lW7keGEaC7K1S9N_BmbLzfgRMvpv2uqRPTqjOy85WjQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role\": \"ADMIN_ROLE\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/proyect-store/vfinal/auth/updateRole/67bdde3965ee6ed91a7e236a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proyect-store",
+						"vfinal",
+						"auth",
+						"updateRole",
+						"67bdde3965ee6ed91a7e236a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }

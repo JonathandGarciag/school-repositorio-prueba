@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "67bdd1f6fa9e4bce7eadee43"
+  },
+  "name": "General",
+  "description": "Categoría predeterminada",
+  "isDefault": true,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-25T14:21:42.990Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T14:21:42.990Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67be021d88000add73cc5807"
+  },
+  "name": "Tecnología",
+  "description": "Categoría relacionada con todo lo tecnológico.",
+  "isDefault": false,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-25T17:47:09.984Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T17:47:09.984Z"
+  }
+}]

@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "958885b5-632d-4d79-b066-b3bb094a8e30",
+		"name": "Category",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42619043"
+	},
+	"item": [
+		{
+			"name": "New Category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZDMwN2VkNjI3ZGMyMzZlMjFjY2EiLCJpYXQiOjE3NDA0OTcxNzUsImV4cCI6MTc0MDUwMDc3NX0.lW7keGEaC7K1S9N_BmbLzfgRMvpv2uqRPTqjOy85WjQ",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tecnología\",\r\n    \"description\": \"Categoría relacionada con todo lo tecnológico.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/proyect-store/vfinal/category/newCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proyect-store",
+						"vfinal",
+						"category",
+						"newCategory"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

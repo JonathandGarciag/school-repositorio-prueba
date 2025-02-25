@@ -6,16 +6,17 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import argon2 from "argon2";
 import { dbConnection } from './mongo.js';
+import { esRoleValido } from '../src/helpers/db-validator.js'; 
 import limiter from '../src/middlewares/validar-cant-peticiones.js';
 import User from '../src/user/user.model.js';
 import Category from '../src/category/category.model.js';
 import authRoutes from '../src/auth/auth.routes.js';
 import userRoutes from '../src/user/user.routes.js';
-import productRoutes from '../src/product/product.model.js';
-import categoryRoutes from '../src/category/category.model.js';
-import invoiceRoutes from '../src/acquisition/invoice/invoice.model.js';
-import historyRoutes from '../src/acquisition/history/history.model.js';
-import cartRoutes from '../src/acquisition/cart/cart.model.js'
+import productRoutes from '../src/product/product.routes.js';
+import categoryRoutes from '../src/category/category.routes.js';
+import invoiceRoutes from '../src/acquisition/invoice/invoice.routes.js';
+import historyRoutes from '../src/acquisition/history/history.routes.js';
+import cartRoutes from '../src/acquisition/cart/cart.routes.js'
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}))
@@ -27,7 +28,13 @@ const middlewares = (app) => {
 } 
 
 const routes = (app) => {
-    app.use("/proyect-store/vfinal/", userRoutes)
+    app.use("/proyect-store/vfinal/user", userRoutes)
+    app.use("/proyect-store/vfinal/auth", authRoutes)
+    app.use("/proyect-store/vfinal/product", productRoutes)
+    app.use("/proyect-store/vfinal/category", categoryRoutes)
+    app.use("/proyect-store/vfinal/invoice", invoiceRoutes)
+    app.use("/proyect-store/vfinal/history", historyRoutes)
+    app.use("/proyect-store/vfinal/cart", cartRoutes)
 }
 
 const conectarDB = async () =>{
@@ -65,6 +72,9 @@ const createAdmin = async () => {
     try {
         const aEmail = "jgarciadmin@gmail.com";
         const aPassword = "12345678";
+        const aRole = "ADMIN_ROLE"; 
+
+        await esRoleValido(aRole);
 
         const existingAdmin = await User.findOne({ email: aEmail });
 
@@ -75,7 +85,7 @@ const createAdmin = async () => {
                 username: "AdminJhonny",
                 email: aEmail,
                 password: encryptedPassword,
-                role: "ADMIN_ROLE",
+                role: aRole,
             });
 
             await aUser.save();
@@ -84,9 +94,11 @@ const createAdmin = async () => {
             console.log(" -> Ya existe un usuario ADMIN.");
         }
     } catch (err) {
-        console.error(" -> Error al crear el admin por defecto:", err);
+        console.error(" -> Error al crear el ADMIN por defecto:", err);
     }
 };
+
+
 
 export const initServer = async () =>{
     const app = express();

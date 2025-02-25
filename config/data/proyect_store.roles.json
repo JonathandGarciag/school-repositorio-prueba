@@ -8,5 +8,5 @@
   "_id": {
     "$oid": "67bd49edf7e0e92d270fdf81"
   },
-  "role": "CUSTOMER_ROLE"
+  "role": "CLIENT_ROLE"
 }]
