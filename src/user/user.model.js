@@ -9,7 +9,7 @@ const userSchema = Schema({
     username: {
         type: String,
         required: [true, "Name is required"],
-        maxLenght: [25, "Xant ve overcome 25 characters"]
+        maxLenght: [25, "Cannot exceed 25 characters"]
     },
     email: {
         type: String,
@@ -25,7 +25,7 @@ const userSchema = Schema({
         type: String,
         required: true,
         enum: ["ADMIN_ROLE", "CUSTOMER_ROLE"], 
-        default: "CUSTOMER"
+        default: "CUSTOMER_ROLE"
     },
     status: {
         type: Boolean,
