@@ -18,13 +18,13 @@
     "$oid": "67be021d88000add73cc5807"
   },
   "name": "Tecnología",
-  "description": "Categoría relacionada con todo lo tecnológico.",
+  "description": "Categoría de productos tecnologicos.",
   "isDefault": false,
-  "status": true,
+  "status": false,
   "createdAt": {
     "$date": "2025-02-25T17:47:09.984Z"
   },
   "updatedAt": {
-    "$date": "2025-02-25T17:47:09.984Z"
+    "$date": "2025-02-26T17:31:34.178Z"
   }
 }]

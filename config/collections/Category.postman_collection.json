@@ -47,6 +47,60 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZDMwN2VkNjI3ZGMyMzZlMjFjY2EiLCJpYXQiOjE3NDA1OTAzNjMsImV4cCI6MTc0MDU5Mzk2M30.SV-KYe85V7NSFX_Fl9V3hJWXwJRZeAe7iESLJoCfBrg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tecnología\",\r\n    \"description\": \"Categoría de productos tecnologicos.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/proyect-store/vfinal/category/updateCategory/67be021d88000add73cc5807",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proyect-store",
+						"vfinal",
+						"category",
+						"updateCategory",
+						"67be021d88000add73cc5807"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Category",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
