@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { createCategory } from "./category.controller.js";
+import { createCategory, getCategory, updateCategory, deleteCategory } from "./category.controller.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { categoryExists } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
@@ -19,5 +19,32 @@ router.post(
     ], 
     createCategory  
 );
+
+router.get(
+    '/viewCategory', 
+    getCategory  
+);
+
+router.put(
+    '/updateCategory/:id', 
+    [
+        validarJWT, 
+        tieneRole("ADMIN_ROLE"),
+    ],
+    updateCategory
+);
+
+router.delete(
+    '/deleteCategory/:id', 
+    [
+        validarJWT, 
+        tieneRole("ADMIN_ROLE"),
+        check("id", "Este id no es valido").isMongoId(),
+        check("id").custom(categoryExists)
+    ],
+    deleteCategory
+);
+
+
 
 export default router;

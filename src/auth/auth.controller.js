@@ -17,7 +17,7 @@ export const register = async (req, res) => {
         });
 
         return res.status(200).json({
-            message: "User registered successfully",
+            message: "Usuario registrado exitosamente",
             userDetails: {
                 user: user.email
             },
@@ -26,7 +26,7 @@ export const register = async (req, res) => {
     } catch (error) {
         console.log(error);
         return res.status(500).json({
-            message: "User registration failed",
+            message: "Error en el registro de usuario",
             error: error.message,
         });
     }
@@ -74,7 +74,7 @@ export const login = async (req, res) => {
     } catch (e) {
         console.log(e);
         res.status(500).json({
-            msg: 'Server error',
+            msg: 'Error al logiarse',
             error: e.message
         });
     }

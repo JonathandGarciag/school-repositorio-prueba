@@ -15,7 +15,6 @@ export const esRoleValido = async (role = '') => {
     }
 };
 
-
 export const existenteEmail = async (email = '') => {
     
     const existeEmail = await User.findOne({ email });
@@ -28,7 +27,7 @@ export const existenteEmail = async (email = '') => {
 export const categoryExists = async (name = '') => {
     const categoryExists = await Category.findOne({ name });
 
-    if (categoryExists) {
-        throw new Error(`La categoría "${name}" ya existe`);
-    }
+    if (!categoryExists) {
+        throw new Error(`La categoría "${name}" no ya existe`);
+    } 
 };
